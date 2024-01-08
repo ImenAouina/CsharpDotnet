@@ -1,0 +1,15 @@
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.csproj.AssemblyReference.cache
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.GeneratedMSBuildEditorConfig.editorconfig
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.AssemblyInfoInputs.cache
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.AssemblyInfo.cs
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.csproj.CoreCompileInputs.cache
+I:\OOP\Practice\Hungry-Ninja\bin\Debug\net6.0\Hungry-Ninja.exe
+I:\OOP\Practice\Hungry-Ninja\bin\Debug\net6.0\Hungry-Ninja.deps.json
+I:\OOP\Practice\Hungry-Ninja\bin\Debug\net6.0\Hungry-Ninja.runtimeconfig.json
+I:\OOP\Practice\Hungry-Ninja\bin\Debug\net6.0\Hungry-Ninja.dll
+I:\OOP\Practice\Hungry-Ninja\bin\Debug\net6.0\Hungry-Ninja.pdb
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.dll
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\refint\Hungry-Ninja.dll
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.pdb
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\Hungry-Ninja.genruntimeconfig.cache
+I:\OOP\Practice\Hungry-Ninja\obj\Debug\net6.0\ref\Hungry-Ninja.dll

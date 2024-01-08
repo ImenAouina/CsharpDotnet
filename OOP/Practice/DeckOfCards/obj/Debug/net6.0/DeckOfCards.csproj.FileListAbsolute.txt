@@ -1,0 +1,15 @@
+I:\OOP\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.exe
+I:\OOP\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.deps.json
+I:\OOP\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.runtimeconfig.json
+I:\OOP\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.dll
+I:\OOP\Practice\DeckOfCards\bin\Debug\net6.0\DeckOfCards.pdb
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.AssemblyReference.cache
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.GeneratedMSBuildEditorConfig.editorconfig
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfoInputs.cache
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.AssemblyInfo.cs
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.csproj.CoreCompileInputs.cache
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.dll
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\refint\DeckOfCards.dll
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.pdb
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\DeckOfCards.genruntimeconfig.cache
+I:\OOP\Practice\DeckOfCards\obj\Debug\net6.0\ref\DeckOfCards.dll

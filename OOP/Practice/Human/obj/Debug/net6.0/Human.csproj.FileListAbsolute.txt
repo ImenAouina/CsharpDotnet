@@ -1,0 +1,5 @@
+I:\OOP\Practice\Human\obj\Debug\net6.0\Human.csproj.AssemblyReference.cache
+I:\OOP\Practice\Human\obj\Debug\net6.0\Human.GeneratedMSBuildEditorConfig.editorconfig
+I:\OOP\Practice\Human\obj\Debug\net6.0\Human.AssemblyInfoInputs.cache
+I:\OOP\Practice\Human\obj\Debug\net6.0\Human.AssemblyInfo.cs
+I:\OOP\Practice\Human\obj\Debug\net6.0\Human.csproj.CoreCompileInputs.cache

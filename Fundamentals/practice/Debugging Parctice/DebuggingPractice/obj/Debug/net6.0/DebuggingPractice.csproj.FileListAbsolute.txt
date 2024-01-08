@@ -1,0 +1,15 @@
+I:\practice\Debugging Parctice\DebuggingPractice\bin\Debug\net6.0\DebuggingPractice.exe
+I:\practice\Debugging Parctice\DebuggingPractice\bin\Debug\net6.0\DebuggingPractice.deps.json
+I:\practice\Debugging Parctice\DebuggingPractice\bin\Debug\net6.0\DebuggingPractice.runtimeconfig.json
+I:\practice\Debugging Parctice\DebuggingPractice\bin\Debug\net6.0\DebuggingPractice.dll
+I:\practice\Debugging Parctice\DebuggingPractice\bin\Debug\net6.0\DebuggingPractice.pdb
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.csproj.AssemblyReference.cache
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.GeneratedMSBuildEditorConfig.editorconfig
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.AssemblyInfoInputs.cache
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.AssemblyInfo.cs
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.csproj.CoreCompileInputs.cache
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.dll
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\refint\DebuggingPractice.dll
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.pdb
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\DebuggingPractice.genruntimeconfig.cache
+I:\practice\Debugging Parctice\DebuggingPractice\obj\Debug\net6.0\ref\DebuggingPractice.dll

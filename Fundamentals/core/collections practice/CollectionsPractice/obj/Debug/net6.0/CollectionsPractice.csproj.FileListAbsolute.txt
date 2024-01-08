@@ -1,0 +1,15 @@
+I:\core\collections practice\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.exe
+I:\core\collections practice\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.deps.json
+I:\core\collections practice\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.runtimeconfig.json
+I:\core\collections practice\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.dll
+I:\core\collections practice\CollectionsPractice\bin\Debug\net6.0\CollectionsPractice.pdb
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.csproj.AssemblyReference.cache
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.GeneratedMSBuildEditorConfig.editorconfig
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.AssemblyInfoInputs.cache
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.AssemblyInfo.cs
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.csproj.CoreCompileInputs.cache
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.dll
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\refint\CollectionsPractice.dll
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.pdb
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\CollectionsPractice.genruntimeconfig.cache
+I:\core\collections practice\CollectionsPractice\obj\Debug\net6.0\ref\CollectionsPractice.dll
