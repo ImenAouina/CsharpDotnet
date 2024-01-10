@@ -1,0 +1,15 @@
+I:\CsharpDotnet\OOP\Practice\IronNinja\bin\Debug\net6.0\IronNinja.exe
+I:\CsharpDotnet\OOP\Practice\IronNinja\bin\Debug\net6.0\IronNinja.deps.json
+I:\CsharpDotnet\OOP\Practice\IronNinja\bin\Debug\net6.0\IronNinja.runtimeconfig.json
+I:\CsharpDotnet\OOP\Practice\IronNinja\bin\Debug\net6.0\IronNinja.dll
+I:\CsharpDotnet\OOP\Practice\IronNinja\bin\Debug\net6.0\IronNinja.pdb
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.csproj.AssemblyReference.cache
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.GeneratedMSBuildEditorConfig.editorconfig
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.AssemblyInfoInputs.cache
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.AssemblyInfo.cs
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.csproj.CoreCompileInputs.cache
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.dll
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\refint\IronNinja.dll
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.pdb
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\IronNinja.genruntimeconfig.cache
+I:\CsharpDotnet\OOP\Practice\IronNinja\obj\Debug\net6.0\ref\IronNinja.dll

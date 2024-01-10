@@ -1,0 +1,15 @@
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.exe
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.deps.json
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.runtimeconfig.json
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.dll
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\bin\Debug\net6.0\WizardNinjaSamurai.pdb
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.AssemblyReference.cache
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.GeneratedMSBuildEditorConfig.editorconfig
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfoInputs.cache
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.AssemblyInfo.cs
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.csproj.CoreCompileInputs.cache
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.dll
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\refint\WizardNinjaSamurai.dll
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.pdb
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\WizardNinjaSamurai.genruntimeconfig.cache
+I:\CsharpDotnet\OOP\Core\WizardNinjaSamurai\obj\Debug\net6.0\ref\WizardNinjaSamurai.dll
