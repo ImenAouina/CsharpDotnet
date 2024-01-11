@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Food</title>
+    </head>
+    <body>
+        <h1>Here are some delicious foods!</h1>
+        @{
+            string [] FoodArray = new string[] {"Apple Pie", "Pizza", "Cinnamon Rolls", "Lasagne", "Donuts", "Chocolate Cake", "Burritos" };
+            foreach(var food in FoodArray)
+            {
+                //<h2>@food[0]</h2>
+                @if(food[0] == 'C')
+                {
+                    <p style="color: red;">@food</p>
+                }
+                else 
+                {
+                     <p>@food</p>
+                }
+            }
+        }
+    </body>
+</html>
