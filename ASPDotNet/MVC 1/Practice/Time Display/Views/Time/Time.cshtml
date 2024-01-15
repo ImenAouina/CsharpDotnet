@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Time Display</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    @{
+        DateTime CurrentTime = DateTime.Now;
+    }
+    <div id="time">
+        <h2>The current Time and Date:</h2>
+        <p>@CurrentTime</p>
+    </div>
+    
+</body>
+</html>

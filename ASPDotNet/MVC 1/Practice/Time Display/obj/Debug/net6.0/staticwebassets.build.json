@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "owp8P9UcoSZcZ/EGijJ4272aDlPwlmvPkKuuZ3ASdbY=",
+  "Source": "Portfolio1",
+  "BasePath": "_content/Portfolio1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Portfolio1\\wwwroot",
+      "Source": "Portfolio1",
+      "ContentRoot": "I:\\CsharpDotnet\\ASPDotNet\\MVC 1\\Practice\\Time Display\\wwwroot\\",
+      "BasePath": "_content/Portfolio1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "I:\\CsharpDotnet\\ASPDotNet\\MVC 1\\Practice\\Time Display\\wwwroot\\css\\style.css",
+      "SourceId": "Portfolio1",
+      "SourceType": "Discovered",
+      "ContentRoot": "I:\\CsharpDotnet\\ASPDotNet\\MVC 1\\Practice\\Time Display\\wwwroot\\",
+      "BasePath": "_content/Portfolio1",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}
