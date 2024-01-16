@@ -1,0 +1,55 @@
+#info-form {
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    border : 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#info-form label {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    margin-right: 30px;
+}
+
+#info-form input,select
+#info-form textarea {
+    width: 400px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3860b7;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:100px;
+}
+
+button:hover {
+    background-color: #2d1287;
+}
+
+h2 {
+    text-align: center;
+}
+div {
+    display:flex;
+    padding-bottom: 20px;
+}
+#submitted-info{
+    display:flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width:500px;
+    height:350px;
+    padding:30px;
+}

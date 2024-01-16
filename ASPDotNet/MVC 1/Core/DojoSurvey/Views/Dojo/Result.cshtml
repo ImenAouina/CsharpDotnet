@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+     <div id="submitted-info">
+        <h1><a href="#" >Submitted Info</a></h1>
+        <p>Name: @ViewBag.name</p>
+        <p>Dojo Location: @ViewBag.location</p>
+        <p>Favorite Language: @ViewBag.language</p>
+        <p>Comment: @ViewBag.comment</p>
+        <button type="submit">Go Back</button>
+    </div>
+    @* <div id="submitted-info">
+        <h1><a href="#" >Submitted Info</a></h1>
+        <p>Name: @ViewData["name"]</p>
+        <p>Dojo Location: @ViewData["location"]</p>
+        <p>Favorite Language: @ViewData["language"]</p>
+        <p>Comment: @ViewData["comment"]</p>
+        <button type="submit">Go Back</button>
+    </div> *@
+</body>
+</html>
