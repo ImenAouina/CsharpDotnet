@@ -1,0 +1,9 @@
+@model int[] 
+<h2>Here are some numbers! </h2>
+<div class="numbers">
+@{
+    foreach(int n in Model){
+        <p>@n</p>
+    }
+}
+</div>
