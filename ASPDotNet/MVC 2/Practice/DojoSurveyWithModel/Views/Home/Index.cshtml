@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+     <section id="info-form">
+        <form action="/survey" method="post">
+            <div>
+                <label for="Name">Your Name:</label>
+                <input type="text" name="Name" required>
+            </div>
+            <div>
+                <label for="Location">Dojo Location:</label>
+                <select name="Location" required>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France </option>
+                    <option value="USA">USA</option>
+                </select>
+            </div>
+            <div>
+                <label for="Language">Favorite language:</label>
+                <select name="Language" required>
+                    <option value="C#">C#</option>
+                    <option value="python">python</option>
+                    <option value="JS">JS</option>
+                </select>
+            </div>
+            <div>
+                <label for="Comment">Comment(optional):</label>
+                <textarea name="Comment" rows="4" ></textarea>
+            </div>
+                <button type="submit">Submit</button>
+        </form>
+    </section>
+
