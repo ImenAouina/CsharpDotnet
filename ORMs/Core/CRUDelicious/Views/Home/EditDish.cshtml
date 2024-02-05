@@ -1,0 +1,40 @@
+
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">Edit @Model.Name</h1>
+    <p><a href="/">Home</a> | <a href="dishes/new">Add a Dish</a></p>
+</div>
+<div class="container">
+    <form asp-action="UpdateDish" asp-controller="Home" method="post">
+    <div class = "mb-3"> 
+        <label asp-for="Chef">Chef´s Name</label>
+        <input asp-for="Chef" class="form-control">
+        <span asp-validation-for="Chef" class="text-danger"></span>
+    </div>
+    <div class = "mb-3"> 
+        <label asp-for="Name">Name of Dish</label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class = "mb-3"> 
+        <label asp-for="Calories"># of Calories</label>
+        <input asp-for="Calories" class="form-control">
+        <span asp-validation-for="Calories" class="text-danger"></span>
+    </div>
+    <div class = "mb-3"> 
+        <label asp-for="Tastiness">Tastiness</label>
+        <input asp-for="Tastiness" class="form-control">
+        <span asp-validation-for="Tastiness" class="text-danger"></span>
+    </div>
+     <div class = "mb-3"> 
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+     <div class = "mb-3"> 
+        <input type="submit" value="Edit Dish" class="btn btn-info">
+    </div>  
+    </form>
+   
+</div>

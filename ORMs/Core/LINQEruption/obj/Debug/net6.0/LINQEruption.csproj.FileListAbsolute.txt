@@ -1,0 +1,15 @@
+I:\CsharpDotnet\ORMs\Core\LINQEruption\bin\Debug\net6.0\LINQEruption.exe
+I:\CsharpDotnet\ORMs\Core\LINQEruption\bin\Debug\net6.0\LINQEruption.deps.json
+I:\CsharpDotnet\ORMs\Core\LINQEruption\bin\Debug\net6.0\LINQEruption.runtimeconfig.json
+I:\CsharpDotnet\ORMs\Core\LINQEruption\bin\Debug\net6.0\LINQEruption.dll
+I:\CsharpDotnet\ORMs\Core\LINQEruption\bin\Debug\net6.0\LINQEruption.pdb
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.csproj.AssemblyReference.cache
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.GeneratedMSBuildEditorConfig.editorconfig
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.AssemblyInfoInputs.cache
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.AssemblyInfo.cs
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.csproj.CoreCompileInputs.cache
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.dll
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\refint\LINQEruption.dll
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.pdb
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\LINQEruption.genruntimeconfig.cache
+I:\CsharpDotnet\ORMs\Core\LINQEruption\obj\Debug\net6.0\ref\LINQEruption.dll
