@@ -21,10 +21,21 @@ public class HomeController : Controller
     [HttpPost("Generate")]
     public IActionResult Generate()
     {    
+        if (HttpContext.Session.GetInt32("keyNumberOfPasscode") != null)
+        {
+            // if "keyNumberOfPasscode" key exist in session so redefine numberOfPasscode by it's value
+            numberOfPasscode = (int)HttpContext.Session.GetInt32("keyNumberOfPasscode");
+        }
+            // else redefine it to 0
+        else numberOfPasscode = 0;
+        //***********other way************// 
+
+        //numberOfPasscode = HttpContext.Session.GetInt32("keyNumberOfPasscode") ?? 0;
+
         string chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";  
         Random rand = new Random();  
         string randomPassCode ="";
-        //numberOfPasscode =(int) HttpContext.Session.GetInt32("keyNumberOfPasscode");
+        //numberOfPasscode = HttpContext.Session.GetInt32("keyNumberOfPasscode") ?? 0;
         
         for(int i=0; i<14; i++)
         {
