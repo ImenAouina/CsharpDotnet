@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using CRUDelicious.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace CRUDelicious.Controllers;
 
@@ -43,26 +44,51 @@ public IActionResult GetOneDish(int  dishId)
     return View("OneDish", oneDish);
 }
 
-//***** Delete a Dish ****//
-
-[HttpPost("deleteDish")]
-public IActionResult DeleteDish(int  dishId)
+//****** Add a dish ********//
+[HttpGet("addDish")]
+public IActionResult AddDish()
 {
-    Dish? DishToDestroy = _context.Dishes.SingleOrDefault(d => d.DishId == dishId);
-    _context.Dishes.Remove(DishToDestroy);
-    _context.SaveChanges();
-    return RedirectToAction("Index");
+    return View();
+}
+
+[HttpPost("create")]
+public IActionResult Create(Dish newDish)
+{
+    if(ModelState.IsValid)
+    {
+        _context.Add(newDish);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    else 
+    {
+        return View("AddDish");
+    }
 }
 
 //****** Edit a Dish ****//
 
+[HttpGet("{dishId}/editDish")]
 public IActionResult EditDish(int  dishId)
 {
-    Dish editedDish = _context.Dishes.FirstOrDefault(d => d.DishId == dishId);
-    return View("EditDish", editedDish);
+    Dish? editedDish = _context.Dishes.FirstOrDefault(d => d.DishId == dishId);
+    if(editedDish == null)
+        return RedirectToAction("Index");
+    return View("EditDish",editedDish);
 } 
 
-[HttpPost("{dishId}/edit")]
+// Edit with post 
+
+// [HttpPost("editDish")]
+// public IActionResult EditDishDish(int  dishId)
+// {
+//     Dish? editedDish = _context.Dishes.FirstOrDefault(d => d.DishId == dishId);
+//     if(editedDish == null)
+//         return RedirectToAction("Index");
+//     return View("EditDish",editedDish);
+// } 
+
+[HttpPost("{dishId}/update")]
 public IActionResult UpdateDish(int  dishId, Dish newDish)
 {
     Dish? oldDish = _context.Dishes.FirstOrDefault(d => d.DishId == dishId);
@@ -80,24 +106,27 @@ public IActionResult UpdateDish(int  dishId, Dish newDish)
     return View("EditDish", newDish);
 }
 
+//***** Delete a Dish ****//
 
-//****** Add a dish ********//
 
-[HttpPost("new")]
-public IActionResult AddDish(Dish newDish)
+
+[HttpGet("{dishId}/deleteDish")]
+public IActionResult DeleteDish(int  dishId)
 {
-    if(ModelState.IsValid)
-    {
-        _context.Add(newDish);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-    }
-    else 
-    {
-        return View("AddDish");
-    }
-}
-
+    Dish? DishToDestroy = _context.Dishes.SingleOrDefault(d => d.DishId == dishId);
+    _context.Dishes.Remove(DishToDestroy);
+    _context.SaveChanges();
+    return RedirectToAction("Index");
+} 
+//Delete with post
+// [HttpPost("deleteDish")]
+// public IActionResult DeleteDishDish(int  dishId)
+// {
+//     Dish? DishToDestroy = _context.Dishes.SingleOrDefault(d => d.DishId == dishId);
+//     _context.Dishes.Remove(DishToDestroy);
+//     _context.SaveChanges();
+//     return RedirectToAction("Index");
+// }
     public IActionResult Privacy()
     {
         return View();

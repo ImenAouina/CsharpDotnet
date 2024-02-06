@@ -4,13 +4,15 @@
 @model List<Dish>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To CRUDdelicious</h1>
-    <p><a href="/">Home</a> | <a href="dishes/new">Add a Dish</a></p>
+    <h1 class="display-4">Welcome To CRUDdelicious!</h1>
+    @* <p><a href="/">Home</a> | <a href="addDish">Add a Dish</a></p> *@
+    <a asp-action="Index" asp-controller="Home">Home</a> | <a asp-action="addDish" asp-controller="Home">Add a Dish</a>
 </div>
 <h2>Check out some recent Dishes</h2><hr>
 
 @* @foreach (Dish d in ViewBag.AllDishes) *@
 @foreach (Dish d in Model)
 {
-    <p><a href="dishes/@d.DishId" > @d.Name</a> by @d.Chef</p>
+    @* <p><a href="dishes/@d.DishId" > @d.Name</a> by @d.Chef</p> *@
+    <p><a asp-action="GetOneDish" asp-controller="Home" asp-route-dishId="@d.DishId">@d.Name</a>by @d.Chef</p> 
 }

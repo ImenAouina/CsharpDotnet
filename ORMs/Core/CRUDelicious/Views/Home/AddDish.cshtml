@@ -2,10 +2,11 @@
 
 <div class="text-center">
     <h1 class="display-4">Add a Dish!</h1>
-    <p><a href="/">Home</a> | <a href="dishes/new">Add a Dish</a></p>
+      @* <p><a href="/">Home</a> | <a href="addDish">Add a Dish</a></p> *@
+    <a asp-action="Index" asp-controller="Home">Home</a> | <a asp-action="addDish" asp-controller="Home">Add a Dish</a>
 </div>
 <div class="container">
-    <form asp-action="AddDish" asp-controller="Home" method="post">
+    <form asp-action="Create" asp-controller="Home" method="post">
     <div class = "mb-3"> 
         <label asp-for="Chef">Chef´s Name</label>
         <input asp-for="Chef" class="form-control">
