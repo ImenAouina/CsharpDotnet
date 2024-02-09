@@ -21,7 +21,7 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost("register")]
+    [HttpPost]
     public IActionResult Register(User user)
     {
        if(ModelState.IsValid) 
@@ -37,6 +37,7 @@ public class HomeController : Controller
             //_context.Add(newUser);
             _context.SaveChanges();
 
+            // Add userId to the session
             HttpContext.Session.SetInt32("userId", newUser.UserId);
             return RedirectToAction("Success");
 

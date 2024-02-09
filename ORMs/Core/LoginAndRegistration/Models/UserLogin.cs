@@ -9,11 +9,13 @@ public class UserLogin
 
     [Required]
     [EmailAddress]
+    [Display(Name ="Your Email")]
     public string LoginEmail {get; set;}
 
     [Required]
-    [MinLength(8)]
+    [MinLength(8, ErrorMessage ="Password must be at least 8 char!!")]
     [DataType(DataType.Password)]
+    [Display(Name ="Your Password")]
     public string LoginPassword {get; set;}
 
 }

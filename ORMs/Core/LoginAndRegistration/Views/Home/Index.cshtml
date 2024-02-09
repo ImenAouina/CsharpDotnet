@@ -3,32 +3,32 @@
 }
  @model User
 
-<div class="row text-center">
+<div class="row text-start fw-bold">
     <div class="col-6 border rounded-2 p-3 ">
         <h2 class ="bg-primary p-3 text-white">Register</h2> 
-        <form asp-controller="Home" asp-action="register" method="post">
+        <form asp-controller="Home" asp-action="Register" method="post">
             <div class="form-group">
-                <label for="FirstName">First Name:</label>
+                <label class ="form-label" asp-for="FirstName"></label>
                 <input asp-for="FirstName" class="form-control">
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="LastName">Last Name:</label>
+                <label class ="form-label" asp-for="LastName"></label>
                 <input asp-for="LastName" class="form-control">
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="Email">Email:</label>
+                <label class ="form-label" asp-for="Email"></label>
                 <input asp-for="Email" class="form-control">
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="Password">Password:</label>
+                <label class ="form-label" asp-for="Password"></label>
                 <input asp-for="Password" class="form-control">
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="PassConfirm">Confirm Password:</label>
+                <label class ="form-label" asp-for="PassConfirm"></label>
                 <input asp-for="PassConfirm" class="form-control">
                 <span asp-validation-for="PassConfirm" class="text-danger"></span>
             </div>

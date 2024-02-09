@@ -8,24 +8,27 @@ public class User
 {
     [Key]
     public int UserId {get; set;}
-    [Required]
+    [Required(ErrorMessage ="FirstName is required!!")]
+    [Display(Name ="First Name")]
     public string FirstName {get; set;}
 
-    [Required]
+    [Required(ErrorMessage ="LastName is required!!")]
+    [Display(Name ="Last Name")]
     public string LastName {get; set;}
 
-    [Required]
+    [Required(ErrorMessage ="Email is required!!")]
     [EmailAddress]
     public string Email {get; set;}
 
-    [Required]
-    [MinLength(8)]
+    [Required(ErrorMessage ="Password is required!!")]
+    [MinLength(8, ErrorMessage ="Password must be at least 8 char!!")]
     [DataType(DataType.Password)]
     public string Password {get; set;}
 
     [NotMapped]
     [DataType(DataType.Password)]
-    [Compare("Password")]
+    [Compare("Password", ErrorMessage ="Password and confirm pass must much ")]
+    [Display(Name ="Confirm Password")]
     public string PassConfirm {get; set;}
 
     public DateTime CreatedAt {get; set;} = DateTime.Now;
