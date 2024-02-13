@@ -1,0 +1,29 @@
+
+
+@model Dish
+<div class="text-center">
+    <Partial Name="_Nav"></Partial>
+    <h2>Yum! Check out our tasty Dishes!</h2>
+    <hr>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>Name</th>
+            <th>Chef</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Dish d in ViewBag.AllDishes)
+        {
+            <tr>
+                <td>@d.Name </td>
+                <td>@d.Chef?.FirstName @d.Chef?.LastName</td>
+                <td>@d.Tastiness</td>
+                <td>@d.Calories</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

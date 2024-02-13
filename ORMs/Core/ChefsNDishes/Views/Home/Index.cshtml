@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Chef>
+
+<div class="text-center">
+    <Partial Name="_Nav"></Partial>
+    <h2>Check out our roster of chefs!</h2>
+    <hr>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Number of Dishes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var chef in Model)
+            {
+                <tr>
+                    <td>@chef.FirstName @chef.LastName </td>
+                    <td>@(@DateTime.Now.Year - chef.DateOfBirth.Year)</td>
+                    <td>@chef.CreatedDishes.Count()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
