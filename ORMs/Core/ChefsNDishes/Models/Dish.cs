@@ -17,7 +17,7 @@ public class Dish
     [Range(1, int.MaxValue)]
     public int Calories { get; set; }
    
-    public string Description { get; set; }
+    public string? Description { get; set; }
     
     public Chef? Chef { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;

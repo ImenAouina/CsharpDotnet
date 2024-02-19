@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Categories Page";
+}
+@model Category
+<div class="row ">
+<Partial Name="_Nav"></Partial>
+    <div class="col-6">
+        <h1 class="display-4 text-center">New Category</h1>
+        <hr>
+        <form asp-action="AddCategory" asp-controller="Home" method="post">
+        <div class = "mb-3"> 
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <input type="submit" value="Create" class="btn btn-primary">
+        </div>  
+        </form>
+    </div>
+    <div class="col-6">
+        <h1 class="display-4 text-center">All Categories</h1>
+        <hr>
+        @foreach(Category c in ViewBag.AllCategories)
+        {
+            <ul class="list-unstyled ml-10">
+                <li>
+                    <a asp-action="ShowCategory" asp-route-categoryId="@c.CategoryId" class="m-lg-5 ">@c.Name</a>
+                </li>
+            </ul>
+        }
+    </div>
+</div>

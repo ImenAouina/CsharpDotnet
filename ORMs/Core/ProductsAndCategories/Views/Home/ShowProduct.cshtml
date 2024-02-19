@@ -1,0 +1,30 @@
+@{
+    ViewBag.ProductId = Model.ProductId;
+}
+@model Product
+<div class="row ">
+<Partial Name="_Nav"></Partial>
+<h1 class="display-4 text-center">@Model.Name</h1>
+
+    <div class="col-6">
+        <h1 class="display-4 text-center">Categories</h1>
+        <hr>
+        @if(Model.MyCategories.Count > 0)
+        {
+            @foreach(var c in Model.MyCategories)
+            {
+                <p>@c.Category?.Name</p>
+            }
+        }
+        else
+        {
+            <p>No Categories</p>
+        }
+    </div>
+
+    <div class="col-6">
+        <h1 class="display-4 text-center">Add Category</h1>
+        <hr>
+        <partial name= "_ShowProductPartial" model="new Association()"/>    
+    </div>
+</div>

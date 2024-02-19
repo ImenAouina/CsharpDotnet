@@ -38,11 +38,10 @@ public class HomeController : Controller
         {
             _context.Dishes.Add(newDish);
             _context.SaveChanges();
-            return RedirectToAction("Dishes"); 
+            return RedirectToAction("Dishes");  
         }
-        else{
-            return View("AddDish"); 
-        }   
+        ViewBag.AllChefs = _context.Chefs.ToList();
+        return View("AddDish");
     }
 
     [HttpGet("dishes/new")]
