@@ -1,0 +1,27 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+}
+@model Wedding
+<h1 class="text-danger">@Model.WedderOne & @Model.WedderTow 's Wedding</h1>
+<h3>@Model.Date.ToString("MMMM dd, yyyy")</h3>
+<h3>Guests:</h3>
+<div class="border border-secondary border-2 rounded-2 p-2 col-3 ">
+    @{
+        if (Model.MyGuests.Count == 0)
+        {
+            <h3 class="bg-warning text-center">There's still no Guests!</h3>
+        }
+        else
+        {
+             foreach (var g in Model.MyGuests)
+            {
+                <ul>
+                    <li>@g.User.FirstName @g.User.LastName</li>
+                </ul> 
+            }
+
+        }
+
+    }
+</div>
+   

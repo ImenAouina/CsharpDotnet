@@ -1,0 +1,55 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    @* string currentUserName = (string)Context.Session.GetString("username"); *@
+}
+@model List<Wedding>
+<hr>    
+@if (Model.Count == 0)
+{
+    <h3 class="bg-warning text-center">There's still no Weddings</h3>
+}
+else
+{ 
+<table class="table table-bordered table-striped table-hover p-4">
+    <thead class="bg-dark text-light ">
+        <tr>
+            <th>Wedding Of</th>
+            <th>Date</th>
+            <th>Guest Count</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var w in Model)
+        {
+            <tr>
+                <td>
+                <a class="text-decoration-none" asp-action="ShowWedding" asp-route-weddingId=@w.WeddingId>
+                @w.WedderOne & @w.WedderTow </a>
+                </td>
+                
+                <td>@w.Date.ToString("MMM dd, yyy")</td>
+                <td>@w.MyGuests.Count</td>
+                <td>
+                @if(@w.UserId == currentUserId)
+                {
+                    <a asp-action="DeleteWedding" asp-route-weddingId=@w.WeddingId>Delete</a>
+                }  
+                else if (!w.MyGuests.Any(g => g.UserId == currentUserId))
+                {
+                    //<button onclick="RSVP(@w.WeddingId)">RSVP</button>
+                    <a asp-action="RSVPWedding" asp-route-weddingId=@w.WeddingId>RSVP</a>
+                }
+                else
+                {
+                    //<button onclick="UnRSVP(@wedding.WeddingId)">Un-RSVP</button>
+                    <a asp-action="UnRSVPWedding" asp-route-weddingId=@w.WeddingId>UnRSVP</a>
+                } 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr>
+
+} 
