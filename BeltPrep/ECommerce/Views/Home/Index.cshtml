@@ -1,0 +1,43 @@
+﻿
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="d-flex flex-row flex-nowrap overflow-auto justify-content-around ">
+        @foreach(Product p in ViewBag.AllProducts)
+        {
+            <div class="m-2 text-center">
+                <img  width="150" height="100" src= @p.Image>
+                <p>@p.ProductName</p>
+                <p>@p.Quantity left</p>
+            </div>   
+        }
+        <div class="text-center">
+            <a  asp-action="Products">Show more Products</a>
+        </div>
+        </div>
+        
+    </div>
+    <div class="row my-4">
+        <div class="col-md-12">
+            <h3 class="text-decoration-underline ">Recent Orders</h3>
+            @foreach(Order o in ViewBag.AllOrders)
+            {
+                int days = (int)(DateTime.Now - o.CreatedAt).TotalDays;
+                <p>@o.Customer.CustomerName purchased @o.Quantity @o.Product.ProductName @days day(s) ago</p>
+                
+            }
+            <a asp-action="Orders">Show more Orders</a>    
+        </div>
+    </div>
+
+
+    <div class="row my-4">
+        <h3 class="text-decoration-underline ">New Customers</h3>
+        @foreach(Customer c in ViewBag.AllCustomers)
+        {
+            int days = (int)(DateTime.Now - c.CreatedAt).TotalDays;
+            <p>@c.CustomerName joined the store @days day(s) ago</p>
+        }
+        <a asp-action="Customers">Show all customers</a>
+    </div>
+
+</div>

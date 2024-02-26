@@ -1,0 +1,42 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+}
+@model Book
+
+<div class="text-center">
+    <h1 class="display-4">Add a Book</h1>
+    <hr>
+</div>
+<div class="col-3 ">
+    <form asp-action="CreateBook" asp-controller="Home" method="post">
+        <input type="hidden" asp-for="UserId" value="@currentUserId">
+        <div class = "mb-3"> 
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control">
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="PublicationYear">Publication Year</label>
+            <input asp-for="PublicationYear" class="form-control">
+            <span asp-validation-for="PublicationYear" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="IsAvailable">Available</label>
+            <input asp-for="IsAvailable" class="form-check ">
+            <span asp-validation-for="IsAvailable" class="text-danger"></span>
+        </div>
+         <div class = "mb-3"> 
+            <input type="submit" value="Submit" class="btn btn-outline-primary ">
+        </div>  
+    </form>
+</div>

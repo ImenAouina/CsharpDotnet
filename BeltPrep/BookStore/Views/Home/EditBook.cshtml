@@ -1,0 +1,24 @@
+@model Book
+<h2>Edit Book</h2>
+<form asp-action="UpdateBook" asp-route-bookId="@Model.BookId">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Title"></label>
+        <input class="form-control " asp-for="Title">
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="PublicationYear"></label>
+        <input class="form-control " asp-for="PublicationYear">
+        <span class="text-danger" asp-validation-for="PublicationYear"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Description"></label>
+        <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div class="mb-3">
+        <input class="form-check-input " asp-for="IsAvailable">
+        <label class="form-check-label " asp-for="IsAvailable"></label>
+    </div>
+    <button class="btn btn-dark">Submit</button>
+</form>

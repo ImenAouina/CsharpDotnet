@@ -1,0 +1,23 @@
+@model Delegation
+
+<form asp-action="DelegateTask" asp-controller="Home" method="post">
+    <div class = "mb-3"> 
+        <input type="hidden" asp-for="TodoId" value="@ViewBag.TodoId">
+        <select class="form-select" asp-for="UserId">
+            @* <option value="">Select a User</option> *@
+            @foreach(var u in ViewBag.AllUsers)
+            {
+                @* if(u.UserId != ViewBag.currentUserId)
+                {
+                    <option value="@u.UserId"> @u.FirstName @u.LastName </option>
+                }    
+               *@
+               <option value="@u.UserId"> @u.FirstName @u.LastName </option>
+            }    
+        </select>
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+    <div class = "mb-3"> 
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </div>  
+</form>

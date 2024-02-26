@@ -1,0 +1,70 @@
+@model Order
+
+<h1 class="text-decoration-underline">Add a new Order</h1>
+
+    @* <div class="container d-flex  border border-1 mb-2"> *@
+    <form  asp-action="CreateOrder" asp-controller="Home" method="post">
+        <div class="d-flex gap-3 my-3">
+            <div class = "col-3"> 
+                <label asp-for="CustomerId">Customer</label>
+                <select class="form-select" asp-for="CustomerId">
+                    <option value="">Select a Customer</option>
+                    @foreach(var c in ViewBag.AllCustomers)
+                    {
+                        <option value="@c.CustomerId"> @c.CustomerName </option>
+                    }    
+                </select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class = "col-3"> 
+                <label asp-for="ProductId">Product</label>
+                <select class="form-select" asp-for="ProductId">
+                    <option value="">Select a Product</option>
+                    @foreach(var p in ViewBag.AllProducts)
+                    {
+                        <option value="@p.ProductId"> @p.ProductName </option>
+                    }    
+                </select>
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            <div class = "col-3"> 
+                <label asp-for="Quantity"></label>
+                <input asp-for="Quantity" class="form-control">
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class = "mb-3"> 
+            <input type="submit" value="Order" class="btn btn-outline-dark mt-2">
+        </div>  
+    </form>
+   
+    <div class="container d-flex d-inline-block m-3"></div>
+    @if (ViewBag.AllOrders.Count == 0)
+    {
+        <h3 class="bg-warning text-center">There's still no Orders</h3>
+    }
+    else
+    { 
+    <table class="table table-bordered table-striped table-hover p-4">
+        <thead class="bg-dark text-light ">
+            <tr>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var o in ViewBag.AllOrders)
+            {
+                <tr>
+                    <td>@o.Customer.CustomerName</td>
+                    <td>@o.Product.ProductName</td>
+                   <td>@o.Quantity</td>
+                    <td>@o.CreatedAt.ToString("MMM dd, yyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    </div>

@@ -1,0 +1,43 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    @* string currentUserName = (string)Context.Session.GetString("username"); *@
+}
+@model List<Like>
+<hr>    
+@if (Model.Count == 0)
+{
+    <h3 class="bg-warning text-center">There's still no Favorite Books</h3>
+}
+else
+{ 
+<table class="table table-bordered table-striped table-hover p-4">
+    <thead class="bg-dark text-light ">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Year</th>
+            <th>Available</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.Book.Title</td>
+                <td>@b.Book.Author?.FirstName</td>
+                <td>@b.Book.PublicationYear</td>
+                <td> @(b.Book.IsAvailable == true ? "yes" :"no") </td>
+                <td>
+                    <a class="btn btn-outline-primary" asp-action="ShowDetails" asp-route-bookId=@b.Book.BookId>View</a>
+                    <form asp-action ="DeleteFavoriteBook" asp-controller="Home">
+                        <input type="hidden" name="likeId" value="@b.LikeId">
+                        <button class="btn btn-outline-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr>
+} 

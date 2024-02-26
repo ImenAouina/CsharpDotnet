@@ -1,0 +1,61 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    string currentUserName = (string)Context.Session.GetString("username");
+}
+<p>Hi @currentUserName</p>
+@model List<Todo>
+
+<div class="row">
+    <div class="col">
+        <h3>To Do</h3>
+        @foreach (Todo t in Model)
+        {
+            if (t.Status == Todo.StatusEnum.ToDo)
+            {
+                <div class="border border-1 border-black rounded p-3 mb-2">
+                    <p>@t.Name</p>
+                    <div class="d-flex justify-content-between ">
+                        <a asp-action="ShowDetails" asp-route-todoId="@t.TodoId">View</a>
+                        <form asp-action="UpdateTodo" asp-route-todoId="@t.TodoId">
+                            <input type="hidden" name="status" value="@Todo.StatusEnum.InProgress">
+                            <button class="btn btn-outline-dark "> > </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="col">
+        <h3>In Progress</h3>
+        @foreach (Todo t in Model)
+        {
+            if (t.Status == Todo.StatusEnum.InProgress)
+            {
+                <div class="border border-1 border-black rounded p-3 mb-2">
+                    <p>@t.Name</p>
+                    <div class="d-flex justify-content-between ">
+                        <a asp-action="ShowDetails" asp-route-todoId="@t.TodoId">View</a>
+                        <form asp-action="UpdateTodo" asp-route-todoId="@t.TodoId">
+                            <input type="hidden" name="status" value="@Todo.StatusEnum.Completed">
+                            <button class="btn btn-outline-dark "> > </button>
+                        </form>
+                    </div>
+
+                </div>
+            }
+        }
+    </div>
+    <div class="col">
+        <h3>Completed</h3>
+        @foreach (Todo t in Model)
+        {
+            if (t.Status == Todo.StatusEnum.Completed)
+            {
+                <div class="border border-1 border-black rounded p-3 mb-2">
+                    <p>@t.Name</p>
+                    <a asp-action="ShowDetails" asp-route-todoId="@t.TodoId">View</a>
+                </div>
+            }
+        }
+    </div>
+</div>

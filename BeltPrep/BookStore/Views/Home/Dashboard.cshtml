@@ -1,0 +1,51 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    @* string currentUserName = (string)Context.Session.GetString("username"); *@
+}
+@model List<Book>
+<hr>    
+@if (Model.Count == 0)
+{
+    <h3 class="bg-warning text-center">There's still no Books</h3>
+}
+else
+{ 
+<table class="table table-bordered table-striped table-hover p-4">
+    <thead class="bg-dark text-light ">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Year</th>
+            <th>Available</th>
+            <th>Likes</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.Title</td>
+                <td>@b.Author?.FirstName</td>
+                <td>@b.PublicationYear</td>
+                <td> @(b.IsAvailable == true ? "yes" :"no") </td>
+                <td>@b.Likes.Count</td>
+                <td>
+                @if(@b.UserId == currentUserId)
+                {
+                    <a asp-action="ShowDetails" asp-route-bookId=@b.BookId>View</a>
+                    <a asp-action="EditBook" asp-route-bookId=@b.BookId>Edit</a>
+                    <a asp-action="DeleteBook" asp-route-bookId=@b.BookId>Delete</a>
+                }  
+                else 
+                {
+                   <a asp-action="ShowDetails" asp-route-bookId=@b.BookId>View</a>
+                } 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr>
+
+} 

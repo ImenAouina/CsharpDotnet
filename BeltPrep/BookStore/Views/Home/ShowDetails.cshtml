@@ -1,0 +1,42 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    ViewBag.UserId = currentUserId;
+    ViewBag.BookId = Model.BookId;
+}
+@model Book
+<div class="row align-items-center " >
+    <div class="col-6">
+        <div>
+            <h1>@Model.Title</h1> 
+            <p class="text-danger fw-bold ">@(Model.IsAvailable == true ? "" : "Not Available")</p> 
+        </div>
+        <p>By <span class="fw-bold ">@Model.Author?.FirstName @Model.Author?.LastName</span></p>
+        <p class="fw-bold ">Description:</p>
+        <p>@Model.Description</p>
+        <p><span class="fw-bold">Publication Year:</span> @Model.PublicationYear</p>
+        <p><span class="fw-bold ">Number of likes: </span>@Model.Likes.Count</p>
+        
+        <div>
+            @{
+                if(Model.UserId == currentUserId)
+                {
+                    <a class="btn btn-outline-danger ml-3" asp-action="DeleteBook" asp-route-bookId=@Model.BookId>Delete</a>
+                    <a class="btn btn-outline-primary" asp-action="EditBook" asp-route-bookId=@Model.BookId>Edit</a>
+                }
+            }            
+        </div>
+    </div>
+    <div class="col-6"> 
+        @if (@Model.Author.UserId != currentUserId)
+        {
+            @if (@Model.Likes.Any(e => e.UserId == currentUserId && e.BookId == Model.BookId))
+            {
+                <partial name="UnLikePartial" model="new Like()" ></partial>
+                <p class="text-danger">You Already Like this book</p>
+            }
+            else{
+                <partial name="LikePartial" model="new Like()" ></partial>
+            }
+        }            
+    </div>
+</div>

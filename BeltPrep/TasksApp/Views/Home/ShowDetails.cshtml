@@ -1,0 +1,40 @@
+
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    ViewBag.currentUserId = currentUserId;
+    ViewBag.TodoId = Model.TodoId;
+}
+@model Todo
+<div class="row align-items-center">
+    <div class="col-6">
+        <h1>@Model.Name</h1> 
+        <p><span class="fw-bold">Publisher:</span> @Model.Publisher?.FirstName @Model.Publisher?.LastName</p>
+        <p class="fw-bold ">Description:</p>
+        <p>@Model.Description</p>
+        <p class="fw-bold">Delegated To:</p>
+        <div>
+            <hr>
+            @if(Model.UsersInCharge.Count != 0)
+            {
+                @foreach(var c in Model.UsersInCharge)
+                {
+                <p>@c.User?.FirstName @c.User?.LastName</p>
+                }
+            }
+            else
+            {
+                <p>No Delegated Users</p>
+            } 
+            @{
+                if(Model.UserId == currentUserId)
+                {
+                    <a class="btn btn-outline-danger" asp-action="DeleteTask" asp-route-todoId="@Model.TodoId">Delete</a>
+                }
+            }         
+        </div>
+    </div>
+    <div class="col-6"> 
+        <h1>Delegate This Task To</h1>
+        <partial name= "_ShowDetailsPartial" model="new Delegation()"/>             
+    </div>
+</div>
