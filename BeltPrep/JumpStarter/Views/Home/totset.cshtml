@@ -1,0 +1,100 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+}
+@model List<Post>
+
+@if (Model.Count == 0)
+{
+    <h3 class="bg-warning text-center">There's still no Posts</h3>
+}
+else
+{ 
+    <div class="row m-3 p-3">
+        @foreach (Post p in Model)
+        {
+            <div class="col-4 border border-1 border-black rounded p-3 mb-2">
+                <div>
+                    <img src="@p.Image" width="300px" alt="">
+                </div> 
+                <div>
+                    <a asp-action="ShowDetails" asp-route-postId="@p.PostId">@p.Title</a>     
+                </div>
+                <p>By <span class="fw-bold ">@p.Author?.Name</span></p>
+                <p><span class="fw-bold">Medium:</span> @p.Medium</p>
+                     @{
+                        int timeAgo = (int) (DateTime.Now - @p.CreatedAt).TotalDays;
+                        int hoursAgo = (int) (DateTime.Now - @p.CreatedAt).Hours;
+                        int minutesAgo = (int) (DateTime.Now - @p.CreatedAt).Minutes;
+                        if (timeAgo > 0)
+                        {
+                            <p class="fw-bold text-danger">Posted for @timeAgo Day(s) Ago</p>      
+                        }
+                        else if(hoursAgo > 0){
+                            <p class="fw-bold text-danger">Posted for @hoursAgo Hour(s) Ago</p>
+                        }
+                        else{
+                            <p class="fw-bold text-danger">Posted for @minutesAgo Minute(s) Ago</p> 
+                        } 
+                    } 
+                <p>@(p.ForSale == true ? "For Sale" : "Not For Sale")</p> 
+                @{
+                    if(p.UserId == currentUserId )
+                    { 
+                        if(p.Likes.Count ==0)
+                        {
+                            <p>No Likes so far</p> 
+                        }
+                        else{
+                            <p>Liked by:<span class="fw-bold">@ViewBag.OneLike</span> and @p.Likes.Count other(s)</p>
+                        }
+                          
+                    }
+                    else       
+                    {
+                        if(p.Likes.Count == 0)
+                        {
+                            <p>Be the First To like This</p> 
+                        }
+                        else{
+
+                            @* List<string> nameone = new List<string>();
+                            string res="";
+                            foreach(Like l in p.Likes )
+                            {    
+                                nameone.Add(l.User.Name);    
+                            }
+                             *@
+                            if(@p.Likes.Count == 1)
+                            {
+                                //res = nameone[0];
+                               <p>Liked only by:<span class="fw-bold"></span></p> 
+                            }
+                            else{
+                                //res = nameone[0];
+                                <p>Liked by:<span class="fw-bold"></span> and @(p.Likes.Count-1) other(s)</p>
+                            }
+                            
+                        }                       
+                    }
+                }  
+                <div>
+                @{
+                    if(p.UserId == currentUserId)
+                    {
+                        <a asp-action="EditPost" asp-route-postId=@p.PostId>Edit</a>
+                        <a asp-action="DeletePost" asp-route-postId=@p.PostId>Delete</a>    
+                    }
+                    else if (!@p.Likes.Any(e => e.UserId == currentUserId && e.PostId == p.PostId))
+                    {
+                        <a asp-action="LikePost" asp-route-postId=@p.PostId>Like</a>
+                    }
+                    else
+                    {
+                        <a asp-action="UnLike" asp-route-postId=@p.PostId>UnLike</a>
+                    } 
+                } 
+                </div>           
+            </div>
+        }
+    </div>
+}

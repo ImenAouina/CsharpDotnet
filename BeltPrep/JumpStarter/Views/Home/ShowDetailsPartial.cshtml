@@ -1,0 +1,12 @@
+@model Support
+
+<form asp-action="SupportProject" class="w-50" method="post">
+    <input type="hidden" asp-for="ProjectId" value="@ViewBag.ProjectId">
+    <input type="hidden" asp-for="UserId" value="@ViewBag.UserId">
+    <div class = "mb-3"> 
+        <label asp-for="SupportAmount">Support This Project</label>
+        <input asp-for="SupportAmount" class="form-control">
+        <span asp-validation-for="SupportAmount" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Support" class="btn btn-outline-dark border border-bottom-3">     
+</form>

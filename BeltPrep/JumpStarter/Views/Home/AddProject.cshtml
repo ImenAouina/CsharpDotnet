@@ -1,0 +1,36 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+}
+@model Project
+
+<div>
+    <h1 class="display-4 text-center ">Start A Project</h1>
+</div>
+<div class="container col-6">
+    <form asp-action="CreateProject" asp-controller="Home" method="post">
+        <input type="hidden" asp-for="UserId" value="@currentUserId">
+        <div class = "mb-3"> 
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="Goal">Goal (in USD)</label>
+            <input asp-for="Goal" class="form-control">
+            <span asp-validation-for="Goal" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="Date">End Date</label>
+            <input asp-for="Date" class="form-control">
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class = "mb-3"> 
+            <label asp-for="Description"></label>
+            <textarea rows="3" asp-for="Description" class="form-control"></textarea> 
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+         <div class = "mb-3"> 
+            <input type="submit" value="Get Started" class="btn btn-outline-dark border border-bottom-3">
+        </div>  
+    </form>
+</div>

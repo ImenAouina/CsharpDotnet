@@ -1,0 +1,64 @@
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    @* string currentUserName = (string)Context.Session.GetString("username"); *@
+}
+@model List<Project>
+<hr>    
+@if (Model.Count == 0)
+{
+    <h3 class="bg-warning text-center">There's still no Projects</h3>
+}
+else
+{ 
+<p class="text-danger">@ViewBag.TotalProjects projects funded - $@ViewBag.TotalRaised raised-  @ViewBag.TotalPledges pledged made </p>
+<table class="table table-bordered table-striped table-hover p-4">
+    <thead class="bg-dark text-light ">
+        <tr>
+            <th>Project Title</th>
+            <th>Total Funded</th>
+            <th>% Funded</th>
+            <th>Creator</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Title</td>
+                @{
+                    int totalFunded = 0;
+                    foreach(Support s in p.Supporters)
+                    {
+                        totalFunded += s.SupportAmount;
+                    }
+                    <td>$@totalFunded</td>
+                }
+                @{
+                    decimal percentageFunded = 0;
+                    if (p.Goal != 0)
+                    {
+                        percentageFunded = Math.Round(((decimal)totalFunded / p.Goal) * 100, 2);
+                    }
+                    <td>@percentageFunded %</td>
+                }
+                @* <td> @totalFunded/@p.Goal * 100 </td> *@
+                <td>@p.Creator?.FirstName @p.Creator?.LastName </td>
+                <td>
+                @if(@p.UserId == currentUserId)
+                {
+                    <a class="text-decoration-none text-dark" asp-action="ShowDetails" asp-route-projectId=@p.ProjectId>View</a> <span> | </span>
+                    <a class="text-decoration-none text-dark"asp-action="DeleteProject" asp-route-projectId=@p.ProjectId>Delete</a>
+                }  
+                else
+                {
+                    <a class="text-decoration-none text-dark"asp-action="ShowDetails" asp-route-projectId=@p.ProjectId>View</a>
+                } 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr>
+
+} 

@@ -1,0 +1,78 @@
+@model Project
+
+@{
+    int currentUserId = (int)Context.Session.GetInt32("userId");
+    ViewBag.ProjectId = Model.ProjectId;
+    ViewBag.UserId = Model.UserId;
+}
+
+<h1 class="text-danger text-center">@Model.Title</h1>
+<p class="text-center w-4">@Model.Description</p>
+
+<div class="row">
+    <div class="col-6">
+        <h2>US $ @ViewBag.TotalFunded</h2>
+        <p>Pledged of US$ @Model.Goal</p>
+        <h2>@Model.Supporters.Count</h2>
+        <p>Supporters</p>
+        <h2>Ends: @Model.Date.ToString("MMMM dd")</h2>
+        
+        @{
+            int timeLeft = (int) (@Model.Date - DateTime.Now).TotalDays;
+            int hoursLeft = (int) (@Model.Date - DateTime.Now).Hours;
+            int minutesLeft = (int) (@Model.Date - DateTime.Now).Minutes;
+
+                if (timeLeft < 0)
+                {
+                    <h2>Campaign closed</h2>      
+                }
+                else if(timeLeft >= 1){
+                    <h2>@timeLeft days left</h2>
+                }
+                else{
+                    <p>@hoursLeft Hour(s) and @minutesLeft minute(s) left until the end Date</p> 
+                } 
+        } 
+    </div>
+    <div class="col-6">
+        @{
+            if (Model.UserId == currentUserId)
+            {
+                <p>Cannot pledge to your own project</p>
+
+            }else if(Model.Supporters.Any(s =>s.UserId != currentUserId))
+            {
+                 <p>You have already supported this project</p>
+
+            }else {
+                <partial name="ShowDetailsPartial" model= "new Support()" /> 
+            }  
+        }
+        
+    </div>
+    @* <div class="col-6">
+        @{
+            if (Model.UserId == currentUserId)
+            {
+                <p>Cannot pledge to your own project</p>
+            }else
+            {
+                <partial name="ShowDetailsPartial" model= "new Support()" />  
+            }     
+        }
+        
+    </div> *@
+    @* <div class="col-6">
+        <form asp-action="SupportProject" class="w-50">
+            <input type="hidden" asp-for="ProjectId" value="@ViewBag.ProjectId">
+            <div class = "mb-3"> 
+                <label asp-for="SupportAmount">Support This Project</label>
+                <input asp-for="SupportAmount" class="form-control">
+                <span asp-validation-for="SupportAmount" class="text-danger"></span>
+            </div>
+            <div class = "mb-3"> 
+                <input type="submit" value="Support" class="btn btn-outline-dark border border-bottom-3">
+            </div> 
+        </form>
+    </div> *@
+</div>
